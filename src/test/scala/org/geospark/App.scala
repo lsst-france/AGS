@@ -1,6 +1,10 @@
 package org.geospark
 
 import org.geospark.enums._
+import org.geospark.enums.{FileDataSplitter, GridType, IndexType}
+import org.geospark.formatMapper.EarthdataHDFPointMapper
+import org.geospark.spatialOperator.{JoinQuery, KNNQuery, RangeQuery}
+import org.geospark.spatialRDD.{CircleRDD, PointRDD, PolygonRDD}
 
 object App {
   def time[R](text: String, block: => R): R = {
@@ -15,7 +19,7 @@ object App {
     result
   }
 
-  def test() = {
+  def test = {
     FileDataSplitter.getFileDataSplitter("csv").toString +
       IndexType.getIndexType("quadtree").toString +
       GridType.getGridType("equalgrid").toString

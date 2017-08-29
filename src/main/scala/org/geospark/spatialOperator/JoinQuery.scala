@@ -1,5 +1,5 @@
 package org.geospark.spatialOperator
 
-class joinQuery {
+class JoinQuery {
 
 }
